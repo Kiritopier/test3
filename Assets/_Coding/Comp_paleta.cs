@@ -19,6 +19,7 @@ public class Comp_paleta : MonoBehaviour
                 posicionPaleta.y += 2.0f * x;
             }
 
+
             if (abajo)
             {
                 posicionPaleta.y -= 2.0f * x;
