@@ -29,8 +29,5 @@ public class Comp_paleta : MonoBehaviour
         });
     }
 
-    public void OnDisable()
-    {
-        Debug.Log("chao");
-    }
+   
 }
