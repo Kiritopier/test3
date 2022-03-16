@@ -8,7 +8,7 @@ public class Comp_paleta : MonoBehaviour
 
     public void OnEnable()
     {
-        Debug.Log("hola");
+        Debug.Log("Me disculpo por lo lento que va el proyecto");
         this.AddUpdate((x) =>
         {
             bool arriba = Input.GetKey(KeyCode.UpArrow);
@@ -16,18 +16,20 @@ public class Comp_paleta : MonoBehaviour
             Vector3 posicionPaleta = TransformPaleta.position;
             if (arriba)
             {
-                posicionPaleta.y += 2.0f * x;
+                posicionPaleta.y += 3.0f * x;
             }
 
 
             if (abajo)
             {
-                posicionPaleta.y -= 2.0f * x;
+                posicionPaleta.y -= 3.0f * x;
             }
 
             TransformPaleta.position = posicionPaleta;
         });
     }
 
-   
+    
+
+    
 }
