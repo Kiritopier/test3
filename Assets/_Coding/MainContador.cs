@@ -20,12 +20,27 @@ public class MainContador : MonoBehaviour
     private int playerScore2;
 
     public bool IA;
+    public Text Ganador;
+    public Text Ganador2;
+
+    public void Awake()
+    {
+        Ganador.gameObject.SetActive(false);
+        Ganador2.gameObject.SetActive(false);
+    }
 
     public void Player1Scored()
     {
         playerScore++;
         player1Text.text = playerScore.ToString();
         ResetPosition();
+
+        if(playerScore >= 5)
+        {
+            Ganador.gameObject.SetActive(true);
+            Destroy(pelota);
+        }
+        
     }
 
     public void Player2Scored()
@@ -33,6 +48,13 @@ public class MainContador : MonoBehaviour
         playerScore2++;
         player2Text.text = playerScore2.ToString();
         ResetPosition();
+
+        if (playerScore2 >= 5 )
+        {
+            Ganador2.gameObject.SetActive(true);
+            Destroy(pelota);
+        }
+
     }
 
     private void ResetPosition()
@@ -47,6 +69,7 @@ public class MainContador : MonoBehaviour
        
         
     }
+
     
 
 }
